@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Guide</title>
+    <meta property="og:title" content="Guide"/>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link href="../static/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a class="active" href="">Guide</a></li>
+      </ul>
+      <div class="container">
+          <h1 class="heading">Guide</h1>
+          <div class="container1">
+            <h2 class="h2">Generating Sheet Music From A Recording</h2>
+            <p class="paragraph">
+              Before using this application you may wish to try it out first. In this guide you will be able
+              to generate your own results using a provided recording of a piano. To generate a score with your own
+              recordings simply select the file for that recording instead.
+              <br><br>For this guide you will need:<br>
+              &#x2022; A musical recording (an example one is provided below.)<br><br>
+              Download the following file: <br>
+              <audio controls preload>
+                <source src="../../resources/PianoRecording.wav" type="audio/wav">
+                Your browser does not support the audio element.
+              </audio>
+              <br> Once the file has successfully downloaded, Go to the home page and click on the choose file option.
+              <br> This sample uses the default settings, set the tempo at 120bpm, the time signature to 4/4 and the minimum division to &#119135;
+              <br> Click on generate and after a short while the page will refresh and produce the result:
+              <img src="../../resources/GuideOutput.PNG" alt="A series of notes written in musical notation to match the above file.">
+              <small>These results may look incorrect. However, they are the correct pitches just in a lower octave.</small>>
+              <br><br><b>Contributing Your own Changes</b><br><br> If you would like to host this application yourself.
+              <br>Or you would like to use a different machine learning model.<br> A full guide can be found in the git repository
+              <a class="hlink" href="https://gitlab.eeecs.qub.ac.uk/40266924/csc3002-40266924">here</a> <br>
+              Any model that accepts a spectrogram as an input can be used where it has an output shape of 128 neurons.
+            </p>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>

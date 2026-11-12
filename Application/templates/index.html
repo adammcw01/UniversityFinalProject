@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Musical Notation Generator</title>
+    <meta property="og:title" content="Musical Notation Generator" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link href="../static/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div>
+      <ul>
+        <li><a class="active" href="">Home</a></li>
+        <li><a href="../static/about.html">About</a></li>
+        <li><a href="../static/guide.html">Guide</a></li>
+      </ul>
+      <div class="container">
+        <div class="container1">
+          <h1 class="heading">Musical Notation Generator</h1>
+
+          <div class="flash-message-box" style="min-height:100%">
+            {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                <script>
+                  var messages = {{messages | safe}};
+                  for (var i=0; i<messages.length; i++) {
+                    alert(messages[i]);
+                  }
+                </script>
+              {% endif %}
+            {% endwith %}
+          </div>
+
+          <form id="EntryForm" class="form" method="post" enctype="multipart/form-data">
+            <input
+              type="file"
+			  name="AudioFile"
+              required=""
+              placeholder="Upload File Here"
+              class="textinput input"
+            />
+            <div class="container2">
+              <p class="label-style2">Time Signature</p>
+              <div class="container3">
+                <input type="radio" id="44" name="time_signature" value="44" checked="checked"/>
+                <label for="44" class="label">4/4</label>
+                <input type="radio" id="34" name="time_signature" value="34" />
+                <label for="34" class="label">3/4</label>
+                <input type="radio" id="68" name="time_signature" value="68" />
+                <label for="68" class="label">6/8</label>
+              </div>
+            </div>
+            <div class="container2">
+              <p class="label-style2">Smallest Note Division</p>
+              <div class="container3">
+                <input type="radio" id="Crotchet" name="note_division" value="0" checked="checked"/>
+                <label for="Crotchet" class="label">&#119135;</label>
+                <input type="radio" id="Quaver" name="note_division" value="1" />
+                <label for="Quaver" class="label">&#119136;</label>
+                <input type="radio" id="Semi-Quaver" name="note_division" value="2"/>
+                <label for="Semi-Quaver" class="label">&#119137;</label>
+              </div>
+            </div>
+			<label for="tempo" class="label">Tempo in bpm:</label>
+			<input type="number" id="tempo" name="tempo" value="120" class="number-input" />
+            <button type="submit" id="Submit" class="submit-button button">
+              Generate!
+            </button>
+          </form>
+		  <embed src="../static/Score.pdf#toolbar=0" type="application/pdf" class="pdf">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>About</title>
+    <meta property="og:title" content="About"/>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link href="../static/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a class="active" href="">About</a></li>
+        <li><a href="guide.html">Guide</a></li>
+      </ul>
+      <div class="container">
+          <h1 class="heading">About</h1>
+          <div class="container1">
+            <p class="paragraph">
+              <br> This website is an example user interface for a project undertook as part CSC3002
+              <b>Generation of Sheet Music Notation for Piano Using Deep Learning.</b>
+              This project was developed by Adam McWilliams, the source code for this project can be found at:
+              <a class="hlink" href="https://gitlab.eeecs.qub.ac.uk/40266924/csc3002-40266924">csc3002-40266924</a> <br><br>
+              The purpose of this project is to generate musical sheet music notation, also known as a score.
+              From a musical recording.<br><br> This application works by implementing a convolutional neural network
+              using the Keras library on the TensorFlow framework.
+              When a recording is uploaded to the server it is split into individual notes based on the tempo.
+              The app converts these notes into spectrogram's using a short-time Fourier transform.<br><br>
+              The notes you see in the final result are the predictions made by the model on the spectrogram's.
+              <br><br> Any information uploaded to the server is deleted after the final score has been generated.
+              <br><br> For a more detailed tutorial on how to use this application please see the guide page.
+              <br><br> This deep learning model was trained based on data found in the NSynth dataset which can be found at
+              <a class="hlink" href="https://magenta.tensorflow.org/datasets/nsynth">https://magenta.tensorflow.org/datasets/nsynth</a>
+              <br><br>To learn more about digital representation of music, please check out
+              <a class="hlink" href="https//en.wikipedia.org/wiki/MIDI">MIDI</a>.
+            </p>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>

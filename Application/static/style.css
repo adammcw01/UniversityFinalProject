@@ -1,0 +1,199 @@
+:root {
+  --dl-color-theme-1: #1d5273ff;
+  --dl-color-theme-2: #498ba6ff;
+  --dl-color-theme-3: #f2d3acff;
+  --dl-color-theme-4: #f2a766ff;
+  --dl-color-theme-5: #bf2e21ff;
+  --dl-color-theme-6: #444444ff;
+}
+
+body {  margin: 0;}
+* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}
+p {  margin: 0;  padding: 4px;}
+
+.container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  background-color: #F2D3AC;
+}
+.container1 {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.container2 {
+  flex: 1;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container3 {
+  flex: 1;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.heading {
+  color: #444444;
+  opacity: 0.9;
+  font-size: 3em;
+  font-style: normal;
+  font-family: Gothic A1;
+  font-weight: 800;
+  margin-top: 50px;
+}
+
+.h2 {
+  color: #444444;
+  opacity: 0.9;
+  font-size: 1.8em;
+  font-style: normal;
+  font-family: Gothic A1;
+  font-weight: 800;
+}
+
+.paragraph {
+  color: #444444;
+  font-family: Gothic A1;
+  text-align: start;
+  font-size: 1.2em;
+}
+
+.body {
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+  letter-spacing: normal;
+  line-height: 1.15;
+}
+
+.form {
+  width: 80%;
+  height: 90%;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  align-self: center;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #F2D3AC;
+}
+
+.textinput {
+  width: 100%;
+  height: 40%;
+  align-self: flex-start;
+  font-family: Gothic A1;
+  padding: 4% 10%;
+  border-width: 1px;
+  border-radius: 4px;
+  background-color: #F2A766;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #F2A766;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  font-family: Gothic A1;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #444444;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #F2D3AC;
+}
+
+.active {
+  background-color: #F2D3AC;
+}
+
+.hlink:link {
+  color: #0000EE;
+}
+
+.hlink:visited {
+  color: #551A8B;
+}
+
+.number-input {
+  color: #dddddd;
+  width: 20%;
+  align-self: center;
+  text-align: center;
+  font-family: Gothic A1;
+  background-color: var(--dl-color-theme-2);
+}
+
+.submit-button {
+  color: var(--dl-color-theme-1);
+  font-size: 48px;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-width: 1px;
+  border-radius: 4px;
+  align-self: center;
+  text-align: center;
+  font-family: Gothic A1;
+  background-color: var(--dl-color-theme-5);
+}
+
+.pdf {
+  background-color: var(--dl-color-theme-3);
+  flex: 1 0 auto;
+  width: 80%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.label {
+  color: #444444;
+  align-self: center;
+  font-style: normal;
+  font-family: Gothic A1;
+}
+
+.label-style2 {
+  color: #444444;
+  align-self: center;
+  font-style: normal;
+  font-family: Gothic A1;
+  font-weight: 500;
+}
